@@ -1,0 +1,31 @@
+if self.went == True:
+    final_hitbar()
+    if final_hitbar() == 'green':
+        HFC.botHB.deduct_health(50)
+        self.player_turn = False
+        self.went = False
+        HFC.sliderlist.remove(HFC.sliderlist[0])
+        HFC.targets.remove(HFC.targets[0])
+        self.timer.reset(self.current_time)
+    if final_hitbar() == 'yellow':
+        HFC.botHB.deduct_health(25)
+        self.player_turn = False
+        self.went = False
+        HFC.sliderlist.remove(HFC.sliderlist[0])
+        HFC.targets.remove(HFC.targets[0])
+        self.timer.reset(self.current_time)
+    if final_hitbar() == 'red':
+        HFC.botHB.deduct_health(13)
+        self.player_turn = False
+        self.went = False
+        HFC.sliderlist.remove(HFC.sliderlist[0])
+        HFC.targets.remove(HFC.targets[0])
+        self.timer.reset(self.current_time)
+    if final_hitbar() == 'delete':
+        self.player_turn = False
+        self.went = False
+        HFC.sliderlist.remove(HFC.sliderlist[0])
+        HFC.targets.remove(HFC.targets[0])
+        self.timer.reset(self.current_time)
+else:
+    pass

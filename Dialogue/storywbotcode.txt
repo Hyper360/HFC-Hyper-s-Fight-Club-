@@ -1,0 +1,59 @@
+if HFC.story1reader.ind > 0 and HFC.story1reader.ind < 41:
+    if HFC.story1reader.ind == 9:
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "CindySURPRISED.png"))
+    elif HFC.story1reader.ind == 13:
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "CindyEMBARASSED.png"))
+    elif HFC.story1reader.ind == 22:
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "CindyEMBARASSED(and-angry).png"))
+    elif HFC.story1reader.ind == 23:
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "None.png"))
+    elif HFC.story1reader.ind == 34:
+        HFC.rock.change_image(os.path.join(main_dir, "Pictures", "RockIrked.png"))
+    elif HFC.story1reader.ind == 40:
+        HFC.rock.change_image(os.path.join(main_dir, "Pictures", "RockNEUTRAL.png"))
+    elif HFC.story1reader.ind == 41:
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "CindyNEUTRAL.png"))
+if HFC.story1reader.ind > 41 and HFC.story1reader.ind < 59:
+    if HFC.story1reader.ind == 42:
+        HFC.rock.change_image(os.path.join(main_dir, "Pictures", "RockSmiley.png"))
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "CindyEMBARASSED.png"))
+    elif HFC.story1reader.ind == 43:
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "CindyEMBARASSED(and-angry).png"))
+    elif HFC.story1reader.ind == 45:
+        HFC.rock.change_image(os.path.join(main_dir, "Pictures", "RockSmile.png"))
+    elif HFC.story1reader.ind == 46:
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "CindyEMBARASSED.png"))
+    elif HFC.story1reader.ind == 47:
+        HFC.background = pygame.image.load(os.path.join(main_dir, "Pictures", "OfficeNight.png"))
+        HFC.background = pygame.transform.scale(HFC.background, pygame.display.get_window_size())
+        HFC.rock.change_image(os.path.join(main_dir, "Pictures", "RockNEUTRAL.png"))
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "None.png"))
+    elif HFC.story1reader.ind == 58:
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "CindyNEUTRAL.png"))
+    elif HFC.story1reader.ind == 59:
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "CindyEMBARASSED(and-angry).png"))
+if HFC.story1reader.ind > 64:
+    if HFC.story1reader.ind == 64:
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "CindySmirk.png"))
+    elif HFC.story1reader.ind == 66:
+        HFC.rock.change_image(os.path.join(main_dir, "Pictures", "RockIrked.png"))
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "CindySad.png"))
+    elif HFC.story1reader.ind == 74:
+        HFC.rock.change_image(os.path.join(main_dir, "Pictures", "RockSmile.png"))
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "CindySmile.png"))
+    elif HFC.story1reader.ind == 77:
+        HFC.cindy.change_image(os.path.join(main_dir, "Pictures", "None.png"))
+    elif HFC.story1reader.ind == 78:
+        HFC.rock.change_image(os.path.join(main_dir, "Pictures", "RockNEUTRAL.png"))
+    elif HFC.story1reader.ind == 81:
+        HFC.background = pygame.image.load(os.path.join(main_dir, "Pictures", "Forest.png"))
+        HFC.background = pygame.transform.scale(HFC.background, pygame.display.get_window_size())
+    elif HFC.story1reader.ind == 85:
+        HFC.rock.change_image(os.path.join(main_dir, "Pictures", "RockIrked.png"))
+    elif HFC.story1reader.ind == 86:
+        HFC.rock.change_image(os.path.join(main_dir, "Pictures", "RockNEUTRAL.png"))
+elif HFC.story1reader.ind > 88:
+    for x in range(random.randint(15, 15)):
+        # For each particle created, it will add the particle to a list
+        particle = PAT.RainParticle(random.randint(0, 1000), -100, random.randint(-10, 10)/10, random.randint(-3, -1), random.randint(3, 5), (192,225,228), 0.5)
+        PAT.rainparticles.append(particle)
